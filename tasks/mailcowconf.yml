@@ -34,7 +34,7 @@
     regexp: "^HTTP_BIND=.*"
     replace: "HTTP_BIND={{ mailcow__config_http_bind | ipaddr }}"
   notify: Recreate mailcow
-  when: mailcow__config_http_bind | length > 0
+  when: mailcow__config_http_bind is defined
 
 - name: Configure HTTPS_PORT
   replace:
