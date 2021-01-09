@@ -237,6 +237,7 @@
     regexp: '^#(WATCHDOG_NOTIFY_EMAIL=)$'
     replace: '\1'
   notify: Recreate mailcow
+  when: (mailcow__config_watchdog_notify_email is defined) and (mailcow__config_watchdog_notify_email | length > 0)
 
 - name: Configure WATCHDOG_NOTIFY_EMAIL
   replace:
