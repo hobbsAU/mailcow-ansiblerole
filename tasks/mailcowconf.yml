@@ -34,7 +34,7 @@
     regexp: "^HTTP_BIND=.*"
     replace: "HTTP_BIND={{ mailcow__config_http_bind | ipaddr }}"
   notify: Recreate mailcow
-  when: mailcow__config_http_bind is defined
+  when: mailcow__config_http_bind | length > 0
 
 - name: Configure HTTPS_PORT
   replace:
@@ -239,7 +239,7 @@
     regexp: '^#(WATCHDOG_NOTIFY_EMAIL=)$'
     replace: '\1'
   notify: Recreate mailcow
-  when: mailcow__config_watchdog_notify_email | length > 0
+  when: mailcow__config_watchdog_notify_email | default(False)
 
 - name: Configure WATCHDOG_NOTIFY_EMAIL
   replace:
