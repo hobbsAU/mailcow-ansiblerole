@@ -27,10 +27,10 @@ mailcow__config_dbuser: mailcow
 # IMPORTANT: Do not use port 8081, 9081 or 65510!
 
 mailcow__config_http_port: 80
-mailcow__config_http_bind: ""
+mailcow__config_http_bind:
 
 mailcow__config_https_port: 443
-mailcow__config_https_bind: ""
+mailcow__config_https_bind:
 
 # ------------------------------
 # Other bindings
