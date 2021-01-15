@@ -20,3 +20,5 @@ mailcow__theme: lumen
 mailcow__install_updates: yes
 
 mailcow__redirect_http_to_https: no
+
+mailcow__start: yes

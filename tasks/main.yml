@@ -68,7 +68,7 @@
     state: present
     build: no
     pull: yes
-  when: not mailcow_running.exists
+  when: (not mailcow_running.exists) and (mailcow__start | bool)
 
 - name: Create mailcow backup directory
   file:
