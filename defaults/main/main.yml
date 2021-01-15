@@ -21,4 +21,4 @@ mailcow__install_updates: yes
 
 mailcow__redirect_http_to_https: no
 
-mailcow__start: yes
+mailcow__start: true
