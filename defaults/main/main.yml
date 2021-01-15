@@ -4,6 +4,7 @@ mailcow__hostname: "{{ inventory_hostname }}"
 
 mailcow__install_path: "/opt/mailcow-dockerized"
 mailcow__git_version: master
+mailcow__backup_path: "/opt/backup"
 
 mailcow__timezone: UTC
 
