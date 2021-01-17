@@ -18,6 +18,7 @@ mailcow__docker_compose_project_name: mailcowdockerized
 mailcow__theme: lumen
 
 mailcow__install_updates: yes
+mailcow__install_config: yes
 
 mailcow__redirect_http_to_https: no
 
